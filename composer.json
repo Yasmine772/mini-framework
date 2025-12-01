@@ -1,0 +1,16 @@
+{
+    "App\\": "src/",
+    "description": "A minimal PHP framework built from scratch for learning MVC, routing, and database layers.",
+    "autoload": {
+        "psr-4": {
+            "Center\\MiniFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yasmin Ebrahim",
+            "email": "yasmineebrahim458@gmail.com"
+        }
+    ],
+    "require": {}
+}
