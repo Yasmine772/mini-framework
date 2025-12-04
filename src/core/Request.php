@@ -9,14 +9,14 @@ class Request
      *  */
     public function method()
     {
-        return strtolower(isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'get');
+        return strtolower($_SERVER['REQUEST_METHOD'] ?? 'get');
     }
     /*
      * Return the current Request path without query parameters
      * */
     public function path()
     {
-        $path = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+        $path = $_SERVER['REQUEST_URI'] ?? '/';
         $position = strpos($path,'?');
         if ($position !== false) {
             $path = substr($path, 0, $position);
@@ -54,14 +54,5 @@ class Request
         }
         return $headers;
     }
-
-
-
-
-
-
-
-
-
 
 }
