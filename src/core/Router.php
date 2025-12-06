@@ -23,8 +23,10 @@ class Router
        $routerInfo = $this->match($method,$path);
         if(! $routerInfo)
         {
+            $html = View::render('errors/404');
+
             $response->setStatusCode(404);
-            $response->setBody("404 Not Found");
+            $response->setBody($html);
             return $response->sendMessage();
         }
         [$handler,$params]=$routerInfo;

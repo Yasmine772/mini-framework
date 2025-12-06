@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
+    <title>Edit User</title>
     <style>
-
         body {
             display: flex;
             justify-content: center;
@@ -52,29 +51,28 @@
             display: flex;
             flex-direction: column;
         }
-
     </style>
 </head>
 <body>
 
-<form method="post" action="/users">
-    <h2>Create User</h2>
+<form method="post" action="/users/<?= $user['id'] ?>/update/">
+    <h2>Edit User</h2>
 
     <label>Name:
-        <input type="text" name="name" value="<?= htmlspecialchars($old['name'] ?? '') ?>">
+        <input type="text" name="name" value="<?= htmlspecialchars($old['name'] ?? $user['name']) ?>">
         <?php if (!empty($errors['name'])): ?>
             <div style="color:red; font-size:12px;"><?= htmlspecialchars($errors['name']) ?></div>
         <?php endif; ?>
     </label>
 
     <label>Email:
-        <input type="email" name="email" value="<?= htmlspecialchars($old['email'] ?? '') ?>">
+        <input type="email" name="email" value="<?= htmlspecialchars($old['email'] ?? $user['email']) ?>">
         <?php if (!empty($errors['email'])): ?>
             <div style="color:red; font-size:12px;"><?= htmlspecialchars($errors['email']) ?></div>
         <?php endif; ?>
     </label>
 
-    <button type="submit">Create</button>
+    <button type="submit">Update</button>
     <button type="button" onclick="window.location='/'" style="background-color:#007BFF; color:white; margin-top:10px;">Back</button>
 </form>
 

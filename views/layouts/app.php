@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<header>
-    <h1>MiniFramework</h1>
-    <hr>
-</header>
 
 <app>
     <?= $content ?>

@@ -7,7 +7,7 @@ class Request
     /*
      * Get the HTTP request method in lowercase, default to 'get'
      *  */
-    public function method()
+    public function method(): string
     {
         return strtolower($_SERVER['REQUEST_METHOD'] ?? 'get');
     }
