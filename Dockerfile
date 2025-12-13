@@ -12,4 +12,4 @@ RUN sed -ri -e 's !/var/www/html! ${APACHE_DOCUMENT_ROOT}! g' \
 
 WORKDIR /var/www/html
 
-COPY ./var/www/html
+COPY . /var/www/html
