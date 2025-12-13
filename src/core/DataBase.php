@@ -1,10 +1,11 @@
 <?php
 
 namespace Center\MiniFramework\Core;
+
 use PDO;
 use PDOException;
 
-class DataBase
+class Database
 {
     private static ?PDO $pdo = null;
 
@@ -15,22 +16,21 @@ class DataBase
             return self::$pdo;
         }
         $connection = $_ENV['DB_CONNECTION'] ?? 'mysql';
-        $host = $_ENV['DB_HOST'] ?? '127.0.0.1';
+        $host = $_ENV['DB_HOST'] ?? 'db';
         $port = $_ENV['DB_PORT'] ?? '3306';
         $database = $_ENV['DB_DATABASE'] ?? 'default_database';
         $username = $_ENV['DB_USERNAME'] ?? 'root';
-        $password = $_ENV['DB_PASSWORD'] ?? '';
+        $password = $_ENV['DB_PASSWORD'] ?? 'root';
 
         try {
             if ($connection == 'sqlite') {
                 $dsn = "sqlite:{$database}";
                 self::$pdo = new PDO($dsn);
-            }
-            else {
+            } else {
                 $dsn = "mysql:host={$host};port={$port};dbname={$database};charset=utf8mb4";
-                self::$pdo = new PDO($dsn, $username, $password,[
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                self::$pdo = new PDO($dsn, $username, $password, [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                 ]);
             }
             return self::$pdo;
@@ -46,17 +46,18 @@ class DataBase
                 throw $e;
             }
         }
-            throw new PDOException('Database connection failed.');
+        throw new PDOException('Database connection failed.');
     }
+
     /*
      * Run a SELECT query and return all records
      **/
-     public static function query(string $sql, array $params = []):array
-     {
-          $statement = self::getConnection()->prepare($sql);
-          $statement->execute($params);
-          return $statement->fetchAll();
-      }
+    public static function query(string $sql, array $params = []): array
+    {
+        $statement = self::getConnection()->prepare($sql);
+        $statement->execute($params);
+        return $statement->fetchAll();
+    }
 
     /*
      * Run a SELECT query and return single record
@@ -68,6 +69,7 @@ class DataBase
         $result = $statement->fetch();
         return $result === false ? null : $result;
     }
+
     /*
      * Run INSERT/UPDATE/DELETE and return affected rows
      * */
@@ -77,6 +79,7 @@ class DataBase
         $statement->execute($params);
         return $statement->rowCount();
     }
+
     /**
      * Get last inserted ID for INSERT
      */
@@ -84,5 +87,4 @@ class DataBase
     {
         return self::getConnection()->lastInsertId();
     }
-
 }

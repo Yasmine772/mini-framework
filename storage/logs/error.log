@@ -1,1 +1,20 @@
 
+[2025-12-13 11:50:35] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:50:37] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:50:48] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:51:04] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:51:18] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:51:32] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:51:41] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:52:11] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:58:12] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:58:14] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 11:59:26] Database connection error : SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-12-13 12:02:34] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 12:10:22] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 12:16:58] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 12:17:04] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 12:18:34] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 12:33:48] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 12:35:20] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[2025-12-13 13:07:48] Database connection error : SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: No such host is known. 

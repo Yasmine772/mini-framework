@@ -2,7 +2,7 @@
 
 namespace Center\MiniFramework\Core;
 
-class view
+class View
 {
     public static function render(string $template, $data = []): bool|string
     {
