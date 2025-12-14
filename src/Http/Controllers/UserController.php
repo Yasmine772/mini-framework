@@ -2,7 +2,7 @@
 
 namespace Center\MiniFramework\Http\Controllers;
 
-use Center\MiniFramework\Core\DataBase;
+use Center\MiniFramework\Core\Database;
 use Center\MiniFramework\Core\Request;
 use Center\MiniFramework\Core\Response;
 use Center\MiniFramework\Core\View;
@@ -31,7 +31,6 @@ class UserController
             if (!$user) {
                 return ErrorHandler::handle404($response);
             }
-
             $html = View::render('User/show', ['user' => $user]);
             $response->setBody($html);
             return $response->sendMessage();

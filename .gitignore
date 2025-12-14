@@ -3,3 +3,4 @@
 /.idea/
 composer.json
 composer.lock
+/storage/logs/

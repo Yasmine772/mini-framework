@@ -1,7 +1,7 @@
 <?php
 
 namespace Center\MiniFramework\Models;
-use Center\MiniFramework\Core\DataBase;
+use Center\MiniFramework\Core\Database;
 abstract class Model
 {
   protected static string $table ='';
@@ -10,12 +10,12 @@ abstract class Model
   public static function all(): array
   {
       $table = static::$table;
-      return DataBase::query("SELECT * FROM $table");
+      return Database::query("SELECT * FROM $table");
   }
   public static function find(int $id)
   {
       $table = static::$table;
-      return DataBase::queryOne("SELECT * FROM $table WHERE id=$id");
+      return Database::queryOne("SELECT * FROM $table WHERE id=$id");
   }
   public static function where(string $column, $value): array
   {
@@ -30,9 +30,9 @@ abstract class Model
 
         $sql = "INSERT INTO `{$table}` (" . implode(',', $columns) . ") VALUES (" . implode(',', $placeholders) . ")";
 
-        DataBase::execute($sql, $data);
+        Database::execute($sql, $data);
 
-        return DataBase::lastInsertId();
+        return Database::lastInsertId();
     }
 
 
